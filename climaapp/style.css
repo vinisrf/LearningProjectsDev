@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'Poppins', 'sans-serif';
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(28, 35, 48);
+}
+.card{
+    width: 90%; /*largura*/
+    max-width: 470px; /* largura maxima */
+    background: linear-gradient(135deg, #00feba, #7d5ca8); /* fundo com gradient linear */
+    color: #fff; /* cor do texto dentro da div card */
+    margin: 100px auto 0; /* as masgins com 100 pixels do topo, automatico da direita e esquerda e 0 da parte de baixo */
+    border-radius: 20px; /* raio da borda que arredondara os cantos */
+    padding: 40px 35px; /* espaçamento entre de tudo que tem dentro da div card */
+    text-align: center; /* alinhamento dos textos dentro da div */
+}
+.search{
+    width: 100%; /* largura */
+    display:flex; 
+    align-items: center; /* alinhando os items no cnetro*/
+    justify-content: space-between; /* conteudo justificado deixando assim a caixa de pesquisa e o botão alinhados lado a lado*/
+}
+.search input{
+    border: 0; /* borda */
+    outline: 0; /* contorno */
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px; /* preenchimento */
+    height: 60px; /* altura */
+    border-radius: 30px; /* raio da borda */
+    flex: 1;
+    margin-right: 16px; /* margin a direita */
+    font-size: 18px; /* tamanho da fonte */
+}
+.search button{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 100%; /* fazendo o raio do botão ficar redondo */
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+.search button img{
+    width: 20px;
+}
+.weather-icon{
+    width: 170px;
+    margin-top: 30px;
+}
+.weather h1{
+    font-size: 80px;
+    font-weight: 500; /* espessura da fonte */
+}
+.weather h2{
+    font-size: 45px;
+    font-weight: 400; /* espessura da fonte */
+    margin-top: -10px;
+}
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.col img{
+    width: 40px;
+    margin-right: 10px;
+
+}
+.humidity, .wind{
+    font-size: 28px;
+    margin-top: -6px;
+}
+.myname{
+    display: inline;
+    align-items: center;
+    margin-top: 10px;
+}
+.myname p{
+    font-size: 11px;
+    margin-top: 20px;
+}
