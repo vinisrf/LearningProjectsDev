@@ -87,6 +87,9 @@ body{
     background: var(--grey);
     position: relative;
 }
+#sidebar .side-menu li.active a{
+    color: var(--blue);
+}
 .side-menu li .active::before{
     content: '';
     position: absolute;
@@ -119,6 +122,9 @@ body{
     font-size: 18px;
     color: var(--dark);
 }
+/*#sidebar .side-menu li a{
+    color: var(--blue);
+}*/
 #sidebar .side-menu.top li a:hover{
     color: var(--blue);
 }
@@ -130,5 +136,8 @@ body{
 }
 #sidebar .side-menu .text{
     padding-left: 5px;
+}
+#sidebar .side-menu .logout .text{
+    color: var(--red);
 }
 /*SIDEBAR*/
