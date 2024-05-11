@@ -140,4 +140,107 @@ body{
 #sidebar .side-menu .logout .text{
     color: var(--red);
 }
-/*SIDEBAR*/
+/* SIDEBAR END */
+
+/* CONTENT */
+#content{
+    position: relative;
+    width: calc(100% - 280px);
+    left: 280px;
+}
+#content nav{
+    height: 50px;
+    background-color: var(--light);
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    grid-gap: 24px;
+    font-family: var(--lato);
+    position: relative;
+}
+#content nav::before{
+    content:'';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    
+    bottom: -40px;
+    left: 0;
+    border-radius: 50%;
+    box-shadow: -20px -20px 0 var(--light);
+}
+#content nav a{
+    color: var(--dark);
+}
+#content nav i.bx.bx-list-ul{
+    cursor: pointer;
+}
+#content nav .nav-link{
+    font-size: 16px;
+    transition: 3s ease;
+}
+#content nav a.nav-link:hover{
+    color: var(--blue);
+}
+#content nav form{
+    max-width: 400px;
+    width: 100px;
+    margin-right: auto;
+}
+#content nav form div.form-input{
+    display: flex;
+    align-items: center;
+    height: 36px;
+}
+#content nav form div.form-input input{
+    height: 100%;
+    flex-grow: 1;
+    padding: 0 16px;
+    border: none;
+    background-color: var(--grey);
+    border-radius: 36px 0 0 36px;
+    outline: none;
+}
+#content nav form .form-input button{
+    padding: 0 5px;
+    width: 36px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--blue);
+    color: var(--light);
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 0 36px 36px 0;
+    cursor: pointer;
+}
+#content nav a.notification{
+    font-size: 20px;
+    position: relative;
+}
+#content nav span.num{
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--light);
+    background: var(--red);
+    color: var(--light);
+    font-weight: 700;
+    font-size: 12px;
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+}
+#content nav a.profile img{
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: static;   
+}
+/* CONTENT END */
