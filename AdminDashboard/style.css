@@ -46,22 +46,25 @@ body{
     height: 100%;
     background-color: var(--light);
     z-index: 1000; /*??*/
-    font-family: var(--lato);
-
-    
+    font-family: var(--lato);   
+    transition: .3s ease;
+    overflow-x: hidden;
+}
+#sidebar.hide{
+    width: 60px;
 }
 #sidebar .brand{
     
     font-size: 24px;
     font-weight: 700;
-    height: 50px;
+    height: 56px;
     display: flex;
     align-items: center;
     color: var(--blue);
 }
 #sidebar .brand img{
     padding: 2px;
-    min-width: 60px;
+    min-width: 50px;
     display: flex;
     justify-content: center;
 }
@@ -87,16 +90,12 @@ body{
     background: var(--grey);
     position: relative;
 }
-#sidebar .side-menu li.active a{
-    color: var(--blue);
-}
 .side-menu li .active::before{
     content: '';
     position: absolute;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    
     right: 0;
     box-shadow: 20px 20px 0 var(--grey);
     z-index: -1;
@@ -119,26 +118,42 @@ body{
     display: flex;
     align-items: center;
     border-radius: 48px;
-    font-size: 18px;
+    font-size: 16px;
     color: var(--dark);
+    white-space: nowrap;
+    overflow-x: hidden;
 }
-/*#sidebar .side-menu li a{
+#sidebar.hide .side-menu li.active a{
+    background: var(--blue);
+}
+#sidebar .side-menu li.active .text{
     color: var(--blue);
-}*/
+}
+#sidebar.hide .side-menu li a{
+    width: calc(48px - (4px * 2));
+    transition: width .3s ease;
+}
 #sidebar .side-menu.top li a:hover{
     color: var(--blue);
 }
 #sidebar .side-menu li a .icon{
-    min-width: calc(20px - ((4px + 6px)) *2);
+    max-width: 20px;
     display: flex;
     justify-content: center;
     padding-left: 2px;
 }
+#sidebar.hide .side-menu li a .icon{
+    min-width: 30px;
+    /*color: var(--blue); (icon é jpg) */ 
+}
 #sidebar .side-menu .text{
     padding-left: 5px;
 }
-#sidebar .side-menu .logout .text{
+#sidebar .side-menu a.logout .text{
     color: var(--red);
+}
+#sidebar.hide .side-menu.top a span.text{
+    background: transparent;
 }
 /* SIDEBAR END */
 
@@ -147,6 +162,11 @@ body{
     position: relative;
     width: calc(100% - 280px);
     left: 280px;
+    transition: .3s ease;
+}
+#sidebar.hide ~ #content{
+    width: calc(100% - 60px);
+    left: 60px;
 }
 #content nav{
     height: 50px;
@@ -184,7 +204,7 @@ body{
 }
 #content nav form{
     max-width: 400px;
-    width: 100px;
+    width: 100%;
     margin-right: auto;
 }
 #content nav form div.form-input{
@@ -216,7 +236,7 @@ body{
     border-radius: 0 36px 36px 0;
     cursor: pointer;
 }
-#content nav a.notification{
+#content nav .notification{
     font-size: 20px;
     position: relative;
 }
@@ -232,7 +252,7 @@ body{
     color: var(--light);
     font-weight: 700;
     font-size: 12px;
-    display: flex;   
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -240,7 +260,51 @@ body{
     width: 36px;
     height: 36px;
     object-fit: cover;
-    border-radius: 50%;
-    position: static;   
+    border-radius: 50%;   
 }
+
 /* CONTENT END */
+
+
+
+@media screen and (max-width: 768px){
+    #content{
+        width: calc(100% - 60px);
+        
+    }
+    
+    #content nav .nav-link{
+        display: none;
+   }
+}
+
+@media screen and (max-width: 576px){
+   #content nav form .form-input input{
+        display: none;
+   }
+    
+   #content nav form .form-input button{
+        width: auto;
+        height: auto;
+        background: transparent;
+        border-radius: none;
+        color: var(--dark);
+   }
+   
+   #content nav form.show .form-input input{
+    display: block;
+   }
+
+   #content nav form.show .form-input button{
+        width: 36px;
+        height: 100%;
+        border-radius: 0 36px 36px 0;
+        color: var(--light);
+        background-color: var(--red);
+   }
+   
+   #content nav form.show ~ .notification,
+   #content nav form.show ~ .profile{
+    display: none;
+   }
+}
