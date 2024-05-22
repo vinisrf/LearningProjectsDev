@@ -163,6 +163,20 @@ body{
 #sidebar.hide .side-menu.top a span.text{
     background: transparent;
 }
+#sidebar .side-menu div.app-made{
+    align-items: center;
+    padding: 5px;
+    display: flex;
+    margin-top: 20px;
+}
+#sidebar div.app-made .text{
+    max-width: 100%;
+    font-family: var(--lato);
+    font-size: 12px;
+}
+#sidebar.hide .side-menu div.app-made{
+    display: none;
+}
 /* SIDEBAR END */
 
 /* CONTENT */
