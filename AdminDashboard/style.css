@@ -80,25 +80,25 @@ body{
     padding: 10px;
     margin-top: 2%;
 }
-#sidebar .side-menu{
+#sidebar .side-menu-bottom{
     width: 100%;
     margin-top: 48px;
 }
-.side-menu a{
+ul a{
     padding-left: 4px;
 }
-#sidebar .side-menu li{
+#sidebar ul li{
     height: 48px;
     background: transparent;
     margin-left: 6px;
     border-radius: 48px 0 0 48px;
     padding: 4px;
 }
-#sidebar .side-menu li.active{
+#sidebar ul li.active{
     background: var(--grey);
     position: relative;
 }
-.side-menu li .active::before{
+#sidebar ul li .active::before{
     content: '';
     position: absolute;
     width: 40px;
@@ -108,7 +108,7 @@ body{
     box-shadow: 20px 20px 0 var(--grey);
     z-index: -1;
 }
-#sidebar .side-menu li .active::after{
+#sidebar ul li .active::after{
     content: '';
     position: absolute;
     width: 40px;
@@ -119,7 +119,7 @@ body{
     box-shadow: 20px -20px 0 var(--grey);
     z-index: -1;
 }
-#sidebar .side-menu li a{
+#sidebar ul li a{
     width: 100%;
     height: 100%;
     background: var(--light);
@@ -131,39 +131,39 @@ body{
     white-space: nowrap;
     overflow-x: hidden;
 }
-#sidebar.hide .side-menu li.active a{
+#sidebar.hide .side-menu-top li.active a{
     background: var(--blue);
 }
-#sidebar .side-menu li.active .text{
+#sidebar .side-menu-top li.active .text{
     color: var(--blue);
 }
-#sidebar.hide .side-menu li a{
+#sidebar.hide ul li a{
     width: calc(48px - (4px * 2));
     transition: width .3s ease;
 }
-#sidebar .side-menu.top li a:hover{
+#sidebar .side-menu-top li a:hover{
     color: var(--blue);
 }
-#sidebar .side-menu li a .icon{
+#sidebar ul li a .icon{
     max-width: 20px;
     display: flex;
     justify-content: center;
     padding-left: 2px;
 }
-#sidebar.hide .side-menu li a .icon{
+#sidebar.hide ul li a .icon{
     min-width: 30px;
     /*color: var(--blue); (o icon nesse caso é jpg com a cor padrão preta não sendo possivel alterar com css) */ 
 }
-#sidebar .side-menu .text{
+#sidebar ul .text{
     padding-left: 5px;
 }
-#sidebar .side-menu a.logout .text{
+#sidebar .side-menu-logout a.logout .text{
     color: var(--red);
 }
-#sidebar.hide .side-menu.top a span.text{
+#sidebar.hide ul a span.text{
     background: transparent;
 }
-#sidebar .side-menu div.app-made{
+#sidebar .side-menu-logout div.app-made{
     align-items: center;
     padding: 5px;
     display: flex;
@@ -174,7 +174,7 @@ body{
     font-family: var(--lato);
     font-size: 12px;
 }
-#sidebar.hide .side-menu div.app-made{
+#sidebar.hide .side-menu-logout div.app-made{
     display: none;
 }
 /* SIDEBAR END */
