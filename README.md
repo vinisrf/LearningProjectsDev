@@ -2,7 +2,7 @@
 # Esse repositório "LearningProjects_Dev" serve para expressar meus aprendizados e aprimoramentos na minha carreira de programador.
 Demonstração de aprendizados; aperfeiçoamentos de conhecimentos; evolução.
 
-<! --
+
 **LearningProjectsDev
 /LearningProjectsDev
 ** é um repositório ✨ _especial_ ✨ porque seu `README.md` aparece em seu perfil GitHub.
@@ -17,4 +17,4 @@ Aqui estão algumas idéias para você começar:
 - 📫 Como entrar em contato comigo: ...
 - 😄 Pronomes: ...
 - ⚡ Curiosidade: ...
--->
+
