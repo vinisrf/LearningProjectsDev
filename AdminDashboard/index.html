@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <!--BOXICONS-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="C:\Users\Pessoal\Documents\Programador\ProjectsGitHub\AdminDashboard\script.js" defer></script>
 
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,12 +54,30 @@
         </ul>
 
         <ul class="side-menu-bottom">
-            <li>
-                <a href="#">
+            <li class="dropdown-dropright">
+                <a href="#" class="btt-openSubmenu">
                     <img class="icon" src="C:\Users\Pessoal\Documents\Programador\@img\AdminDashboard\settings.png" width="20px">
                     <span class="text">Settings</span>
                 </a>
-                
+                <!--SUBMENU SETTINGS-->
+                <div class="drop">
+                    <ul class="menu-settings">
+                        <i class='bx bx-x' id="bx-close"></i>
+                        <li>
+                            <h3>User</h3>
+                            <hr> 
+                            <a href="#">
+                                <span class="text">Redefine Password</span>
+                            </a>
+                        </li>
+                        <li>
+                            <h3>Geral</h3>
+                            <hr>
+                            <h4>Dark Mode</h4>
+                            <input id="nigth-mode" class="lamp" type="checkbox"/>
+                        </li>
+                    </ul>
+                </div>
             </li>
         </ul>
         
@@ -76,10 +95,10 @@
     </section>
     <!--SIDEBAR-END-->
 
-    <!--CONTENT-->
+    <!-- CONTENT -->
     <section id="content">
         <!--NAVBAR-->
-        <nav>
+        <nav class="top-menu">
             <i class='bx bx-list-ul' style='color:#080808' ></i>
             <a href="#" class="nav-link">Categories</a>
             <form action="#">
@@ -100,121 +119,121 @@
                 <!--</div>-->
         </nav>
         <!--NAVBAR END-->
-
+        
         <!--MAIN-->
-    <main>
-        <div class="head-title">
-            <div class="left">
-                <h1>Dashboard</h1>
-                <ul class="breadcrumb">
-                    <li>
-                        <a href="#">Dashboard</a>
-                    </li>
-                    <li><i class='bx bx-chevron-right'></i></li>
-                    <li>
-                        <a class="active" href="#">Home</a>
-                    </li>
-                </ul>
-            </div>
-            <a href="#" class="btn-download">
-                <i class='bx bx-download'></i>
-                <span class="text">Download PDF</span>
-            </a>
-        </div>
-        <ul class="box-info">
-            <li>
-                <i class='bx bx-calendar-check' ></i>
-                <span class="text">
-                    <h3>1020</h3>
-                    <p>New Order</p>
-                </span>
-            </li>
-            <li>
-                <i class='bx bxs-group'></i>
-                <span class="text">
-                    <h3>2834</h3>
-                    <p>Visitors</p>
-                </span>
-            </li>
-            <li>
-                <i class='bx bxs-dollar-circle' ></i>
-                <span class="text">
-                    <h3>$1523</h3>
-                    <p>Total Sales</p>
-                </span>
-            </li>
-        </ul>
-        <div class="table-data">
-            <div class="order">
-                <div class="head">
-                    <h3>Recent Orders</h3>
-                    <i class='bx bx-search'></i>
-                    <i class='bx bx-filter'></i>
+        <main>
+            <div class="head-title">
+                <div class="left">
+                    <h1>Dashboard</h1>
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="#">Dashboard</a>
+                        </li>
+                        <li><i class='bx bx-chevron-right'></i></li>
+                        <li>
+                            <a class="active" href="#">Home</a>
+                        </li>
+                    </ul>
                 </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>User</th>
-                            <th>Date Order</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <img src="C:\Users\Pessoal\Documents\Programador\@img\AdminDashboard\user_man.jpg">
-                                <p>Person</p>
-                            </td>
-                            <td>10-02-2023</td>
-                            <td><span class="status process">process</span></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="C:\Users\Pessoal\Documents\Programador\@img\AdminDashboard\user_woman.jpg">
-                                <p>Person</p>
-                            </td>
-                            <td>10-02-2023</td>
-                            <td><span class="status pending"> pending</span></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="C:\Users\Pessoal\Documents\Programador\@img\AdminDashboard\user_woman.jpg">
-                                <p>Person </p>
-                            </td>
-                            <td>10-02-2023</td>
-                            <td><span class="status completed">Completed</span></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <a href="#" class="btn-download">
+                    <i class='bx bx-download'></i>
+                    <span class="text">Download PDF</span>
+                </a>
             </div>
-            <div>
-                <div class="head">
-                    <h3>Todos</h3>
-                    <i class='bx bx-plus'></i>
-                    <i class='bx bx-filter'></i>
+            <ul class="box-info">
+                <li>
+                    <i class='bx bx-calendar-check' ></i>
+                    <span class="text">
+                        <h3>1020</h3>
+                        <p>New Order</p>
+                    </span>
+                </li>
+                <li>
+                    <i class='bx bxs-group'></i>
+                    <span class="text">
+                        <h3>2834</h3>
+                        <p>Visitors</p>
+                    </span>
+                </li>
+                <li>
+                    <i class='bx bxs-dollar-circle' ></i>
+                    <span class="text">
+                        <h3>$1523</h3>
+                        <p>Total Sales</p>
+                    </span>
+                </li>
+            </ul>
+            <div class="table-data">
+                <div class="order">
+                    <div class="head">
+                        <h3>Recent Orders</h3>
+                        <i class='bx bx-search'></i>
+                        <i class='bx bx-filter'></i>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Date Order</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="C:\Users\Pessoal\Documents\Programador\@img\AdminDashboard\user_man.jpg">
+                                    <p>Person</p>
+                                </td>
+                                <td>10-02-2023</td>
+                                <td><span class="status process">process</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="C:\Users\Pessoal\Documents\Programador\@img\AdminDashboard\user_woman.jpg">
+                                    <p>Person</p>
+                                </td>
+                                <td>10-02-2023</td>
+                                <td><span class="status pending"> pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="C:\Users\Pessoal\Documents\Programador\@img\AdminDashboard\user_woman.jpg">
+                                    <p>Person </p>
+                                </td>
+                                <td>10-02-2023</td>
+                                <td><span class="status completed">Completed</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <ul class="todo-list">
-                    <li class="completed">
-                        <p>Todo List</p>
-                        <i class='bx bx-dots-vertical-rounded'></i>
-                    </li>
-                    <li class="not-completed">
-                        <p>Todo List</p>
-                        <i class='bx bx-dots-vertical-rounded'></i>
-                    </li>
-                    <li class="completed">
-                        <p>Todo List</p>
-                        <i class='bx bx-dots-vertical-rounded'></i>
-                    </li>
-                </ul>
+                <div>
+                    <div class="head">
+                        <h3>Todos</h3>
+                        <i class='bx bx-plus'></i>
+                        <i class='bx bx-filter'></i>
+                    </div>
+                    <ul class="todo-list">
+                        <li class="completed">
+                            <p>Todo List</p>
+                            <i class='bx bx-dots-vertical-rounded'></i>
+                        </li>
+                        <li class="not-completed">
+                            <p>Todo List</p>
+                            <i class='bx bx-dots-vertical-rounded'></i>
+                        </li>
+                        <li class="completed">
+                            <p>Todo List</p>
+                            <i class='bx bx-dots-vertical-rounded'></i>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </main>
-    <!--MAIN END-->
+        </main>
+        <!--MAIN END-->
     
     </section>
     <!--CONTENT END-->
     
-    <script src="script.js"></script>
+    
 </body>
 </html>

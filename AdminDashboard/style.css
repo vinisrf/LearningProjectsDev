@@ -35,22 +35,59 @@ li{
 html{
     overflow: hidden;
 }
+
+/*modos dark*/
 body{
-    background-color: var(--grey);
+    /*background-color: var(--grey);*/
+    background-color: #807a7aec;
+}
+body #content nav::before{
+    color: #342E37;
+}
+body span{
+    color: #FFF2C6;
+}
+body p{
+    color: #FFF2C6;
+}
+body h3{
+    color: #FFF2C6;
+}
+body td{
+    color: #FFF2C6;
+}
+body main ul.box-info li{
+    background-color: #342E37;
+}
+body #content main .table-data > div{
+    background: #342E37;
+}
+body #content main .table-data div ul.todo-list li{
+    background: #807a7aec;
+}
+body #content main .table-data .order .head i{
+    color: #FFF2C6;
+}body #content main .table-data .head i{
+    color: #FFF2C6;
+}
+body #content main .table-data table tbody tr:hover{
+    background: #807a7aec;
 }
 
 /*SIDEBAR*/
 #sidebar{
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 280px;
     height: 100%;
-    background-color: var(--light);
+    /*background-color: var(--light);*/
+    background-color: #342E37;
     z-index: 2000; /*??*/
     font-family: var(--lato);   
     transition: .3s ease;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
+    
 }
 #sidebar.hide{
     width: 60px;
@@ -65,8 +102,9 @@ body{
     position: sticky;
     top: 0;
     left: 0;
-    background: var(--light);
-    z-index: 500;
+    /*background: var(--light);*/
+    background: #342E37;
+    z-index: 1;
     padding-bottom: 20px;
     box-sizing: content-box;
 }
@@ -75,10 +113,14 @@ body{
     min-width: 50px;
     display: flex;
     justify-content: center;
+    z-index: 1;
 }
 #sidebar a.brand{
     padding: 10px;
     margin-top: 2%;
+}
+#sidebar.hide a.brand .text{
+    display: none;
 }
 #sidebar .side-menu-bottom{
     width: 100%;
@@ -95,7 +137,8 @@ ul a{
     padding: 4px;
 }
 #sidebar ul li.active{
-    background: var(--grey);
+    /*background: var(--grey);*/
+    background: #807a7aec;
     position: relative;
 }
 #sidebar ul li .active::before{
@@ -105,7 +148,8 @@ ul a{
     height: 40px;
     border-radius: 50%;
     right: 0;
-    box-shadow: 20px 20px 0 var(--grey);
+    /*color: var(--grey);*/
+    box-shadow: 20px 20px 0;
     z-index: -1;
 }
 #sidebar ul li .active::after{
@@ -122,7 +166,8 @@ ul a{
 #sidebar ul li a{
     width: 100%;
     height: 100%;
-    background: var(--light);
+    /*background: var(--light);*/
+    background: #342E37;
     display: flex;
     align-items: center;
     border-radius: 48px;
@@ -177,6 +222,85 @@ ul a{
 #sidebar.hide .side-menu-logout div.app-made{
     display: none;
 }
+#sidebar .side-menu-bottom li.active a{
+    background: var(--blue);
+}
+#sidebar .dropdown .dropright{
+    position: relative;
+}
+#sidebar li.dropdown-dropright div.drop{
+    position: absolute;
+    height: 200px;     
+    overflow: hidden;  
+    display: none; 
+}
+#sidebar li.dropdown-dropright.active div.drop{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 280px;
+    background-color: var(--grey);
+    min-width: 200px;
+    height: 650px;
+    z-index: 5;
+    top: -310px;
+    border-radius: 15px;
+}
+#sidebar.hide li.dropdown-dropright.active div.drop{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 60px;
+    background-color: var(--grey);
+    height: 650px;
+    z-index: 5;
+    top: -300px;
+    border-radius: 11px;
+    
+}
+#sidebar div.drop .menu-settings{
+    background-color: var(--light);
+    justify-content: space-between;
+    border-radius: 12px;
+    height: 95%;
+}
+#sidebar.hide .drop ul li a{
+    border-radius: 12px;
+    width: auto;
+}
+#sidebar .drop ul i{
+    display: inline-flex;
+    cursor: pointer;
+    font-size: 30px;
+}
+#sidebar .drop ul li{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+#sidebar .drop ul li a{
+    background-color: var(--dark-grey);
+    display: flex;
+    padding: 0 16px;
+    align-items: center;
+    margin-top: 10px;
+}
+#sidebar .drop ul li h4{
+    margin-top: 10px;
+}
+#sidebar .drop ul input{
+    width: auto;
+}
+/*.open{
+    display: block;
+}*/
+
 /* SIDEBAR END */
 
 /* CONTENT */
@@ -185,15 +309,20 @@ ul a{
     width: calc(100% - 280px);
     left: 280px;
     transition: .3s ease;
+    
 }
 #sidebar.hide ~ #content{
     width: calc(100% - 60px);
     left: 60px;
 }
-/* NAV */
+/* NAV*/
+/*#night-mode.active::after #content nav{
+    background-color: var(--dark);
+}*/
 #content nav{
     height: 56px;
-    background-color: var(--light);
+    /*background-color: var(--light);*/
+    background-color: #342E37;
     padding: 0 24px;
     display: flex;
     align-items: center;
@@ -212,20 +341,25 @@ ul a{
     bottom: -40px;
     left: 0;
     border-radius: 50%;
-    box-shadow: -20px -20px 0 var(--light);
-}
-#content nav a{
-    color: var(--dark);
+    box-shadow: -20px -20px 0;
+    /*color: var(--light);*/
+
 }
 #content nav i.bx.bx-list-ul{
     cursor: pointer;
 }
-#content nav .nav-link{
+#content nav a.nav-link{
+    font-size: 16px;
+    text-emphasis-color: white;
     font-size: 16px;
     transition: 3s ease;
+    opacity: 0;
+    
 }
-#content nav a.nav-link:hover{
+#content .bx-list-ul:hover + .nav-link{
     color: var(--blue);
+    transition: 2s ease;
+    opacity: 1;
 }
 #content nav form{
     max-width: 400px;
@@ -288,6 +422,7 @@ ul a{
     object-fit: cover;
     border-radius: 50%;   
 }
+
 /* NAV END*/
 
 /* MAIN */
@@ -297,7 +432,9 @@ ul a{
     font-family: var(--poppins);
     max-height: calc(100vh - 56px);
     overflow-y: auto;
+    z-index: -2;
 }
+
 #content main .head-title{
     display: flex;
     align-items: center;
@@ -349,7 +486,7 @@ ul a{
 #content main .box-info li{
     display: flex;
     padding: 24px;
-    background: var(--light);
+    /*background: var(--light);*/
     border-radius: 20px;
     align-items: center;
     grid-gap: 24px;  
@@ -389,7 +526,7 @@ ul a{
 }
 #content main .table-data > div{
     border-radius: 20px;
-    background: var(--light);
+    /*background: var(--light);*/
     padding: 24px;
 }
 #content main .table-data .head{
@@ -438,7 +575,7 @@ ul a{
     object-fit: cover;
 }
 #content main .table-data table tbody tr:hover{
-    background: var(--grey);
+    /*background: var(--grey);*/
 }
 #content main .table-data table tbody tr td span.status{
     font-size: 10px;

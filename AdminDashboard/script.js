@@ -1,4 +1,4 @@
-/* destacar visualmente o item do menu que está atualmente selecionado. */
+/* destaca o elemento do menu sidebar selecionado no momento . */
 const allSideMenu = document.querySelectorAll('#sidebar .side-menu-top li a, #sidebar .side-menu-bottom li a');
 
 allSideMenu.forEach(item=> {
@@ -11,6 +11,8 @@ allSideMenu.forEach(item=> {
         li.classList.add('active');
     })
 });
+/* AND */ 
+
 
 /* TOGGLE SIDEBAR */
 const menuBar = document.querySelector('#content nav i.bx.bx-list-ul');
@@ -26,6 +28,40 @@ if(window.innerWidth < 768) {
 }
 /* TOGGLE SIDEBAR END*/
 
+/* Quando o usuário clica no link Settings, mostrar o conteúdo do menu suspenso */
+
+/* função fechar o submenu drop ao clicar */
+  
+    const closeButton = document.querySelector('.drop i.bx-x'); // Seleciona o ícone de fechamento  
+    const submenu = document.querySelector('.drop'); // Seleciona o submenu que será fechado
+    const openSubmenu = document.querySelector('.btt-openSubmenu'); // Seleciona o elemento responsavel em abrir o submenu settings
+
+    // Inicializa o submenu como fechado  
+    submenu.style.display = 'none'; // Opção para garantir que o submenu esteja inicialmente fechado  
+
+    // Funcionalidade para abrir o submenu ao clicar no botão de abrir  
+    if (openSubmenu) {  
+        openSubmenu.addEventListener('click', (event) => {  
+            event.preventDefault(); // Previne o comportamento padrão do link  
+            // Verifica se o submenu está fechado e alterna a visibilidade  
+            if (submenu.style.display === 'none' || submenu.style.display === '') {  
+                submenu.style.display = 'block'; // Abre o submenu  
+            } else {  
+                submenu.style.display = 'none'; // Fecha o submenu se já estiver aberto  
+            }  
+        });  
+    }  
+
+    if (closeButton) {  
+        closeButton.addEventListener('click', () => {  
+            submenu.style.display = 'none'; // Fecha o submenu definindo o estilo como 'none'  
+        });  
+    }  
+
+
+/* DROPDOWN END */
+
+/* SearchButton e SearchForm */
 const searchButton = document.querySelector('#content nav form .form-input button');
 const searchButtonIcon = document.querySelector('#content nav form .form-input button .bx');
 const searchForm = document.querySelector('#content nav form');
@@ -41,7 +77,6 @@ searchButton.addEventListener('click', function(e){
     }
 })
 
-
 if (window.innerWidth > 576) {
     searchButtonIcon.classList.replace('bx-x', 'bx-search');
     searchForm.classList.remove('show');
@@ -53,3 +88,6 @@ window.addEventListener('resize', function(){
         searchForm.classList.remove('show');
     }
 })
+/* SearchButton e SearchForm END */
+
+// FUNCTION NIGHT MODE 
