@@ -38,7 +38,7 @@ function aprovaCredito (){
     let salarioMes = parseFloat(input("INFORME SEU RENDIMENTO MENSAL: "));
     contaCC.Credito = salarioMes * 1.5;
     
-    return contaCC.Usuario;
+    return contaCC.Credito;
     
 }
 // função: Após informar nome e renda mensal, o sistema pesrgunta se deseja confirmar e prosseguir ou se deseja editar os dados.
