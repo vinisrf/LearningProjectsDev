@@ -47,7 +47,7 @@ function confirmaDados(){
     
     if(confDados == 1){
         console.log("CONTA CRIADA! ", "USUARIO: "  + contaCC.Usuario+ " CREDITO DISPONIVEL: " + contaCC.Credito.toFixed(3))
-        criaNumConta();
+        
 
     }else if(confDados == 2){
         criaUser();
