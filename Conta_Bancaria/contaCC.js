@@ -91,7 +91,7 @@ function geraNumConta (){
         return contaCC.NumeroConta
 }
 
-// função: volta para o inicio
+// função: volta para o inicio (EM MANUTENÇÂO)
 function retornoInicio(){
     
     let abreConta = parseInt(input("PARA ABRIR CONTA TECLE [1] PARA CANCELAR TECLE [2]:"));
