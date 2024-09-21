@@ -3,7 +3,7 @@ const input = require ('prompt-sync')();
 /**
  * Conta Bancaria 
  * 
- * desenvolvimento
+ * Em desenvolvimento
  * 
  * */  
 
