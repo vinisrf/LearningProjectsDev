@@ -35,7 +35,7 @@ if(window.innerWidth < 768) {
     const closeButton = document.querySelector('.drop i.bx-x'); // Seleciona o ícone de fechamento  
     const submenu = document.querySelector('.drop'); // Seleciona o submenu que será fechado
     const openSubmenu = document.querySelector('.btt-openSubmenu'); // Seleciona o elemento responsavel em abrir o submenu settings
-
+    const cleseSubmenu = document.querySelector('.side-menu-top li, .side-menu-top li a ');
     // Inicializa o submenu como fechado  
     submenu.style.display = 'none'; // Opção para garantir que o submenu esteja inicialmente fechado  
 
@@ -48,18 +48,33 @@ if(window.innerWidth < 768) {
                 submenu.style.display = 'block'; // Abre o submenu  
             } else {  
                 submenu.style.display = 'none'; // Fecha o submenu se já estiver aberto  
-            }  
+            }
         });  
     }  
 
     if (closeButton) {  
         closeButton.addEventListener('click', () => {  
             submenu.style.display = 'none'; // Fecha o submenu definindo o estilo como 'none'  
+            
         });  
     }  
-
+   // Adiciona o evento de clique a todos os elementos li do .side-menu-top  
+    const sideMenuItems = document.querySelectorAll('.side-menu-top li');  
+    sideMenuItems.forEach(item => {  
+        item.addEventListener('click', () => {  
+        submenu.style.display = 'none'; // Fecha o submenu ao clicar em um li do side-menu-top 
+        });  
+    }); 
 
 /* DROPDOWN END */
+
+/* ativa/desativa dark mode*/
+const iconButtonDark = document.querySelector('.drop .btt-darkmode img');
+document.querySelector('.btt-darkmode').addEventListener('click', function() {  
+    
+
+    iconButtonDark.style = 'float: right';
+});
 
 /* SearchButton e SearchForm */
 const searchButton = document.querySelector('#content nav form .form-input button');
