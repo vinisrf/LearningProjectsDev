@@ -80,7 +80,7 @@ function confirmaDados(){
 function geraNumConta (){
     let min = 0;
     let max = 9;
-
+    let numConta = [null,null,null,null,'.',null,null,null,null,'.',null,null,null,null,'.',null,null,null,null];
     numConta = numConta.map( value => digitosConta = Math.floor(Math.random() * (max - min + 1)) + min);
         numConta.splice(4,1,'.')
         numConta.splice(9,1,'.')
