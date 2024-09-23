@@ -20,8 +20,8 @@ const contaCC = {
 
 /** Variaveis globais */
 
-let abreConta = parseInt(input("PARA ABRIR CONTA TECLE [1] PARA CANCELAR TECLE [2]:"));
-let numConta = [null,null,null,null,".",null,null,null,null,".",null,null,null,null,".",null,null,null,null];
+let abreConta = parseInt(input("ABRIR CONTA TECLE [1] CANCELAR OPERAÇÃO [2]:"));
+
 
 /**--------------------- */
 
@@ -91,19 +91,21 @@ function geraNumConta (){
         return contaCC.NumeroConta
 }
 
-// função: volta para o inicio (EM MANUTENÇÃO)
+// função: volta para o inicio
 function retornoInicio(){
     
-    let abreConta = parseInt(input("PARA ABRIR CONTA TECLE [1] PARA CANCELAR TECLE [2]:"));
-    while (abreConta != 1) {
+    let abreConta = parseInt(input("ABRIR CONTA TECLE [1] CANCELAR OPERAÇÃO [2]:"));
+    while (abreConta != 1 && abreConta != 2) {
         console.log("OPÇÃO INVÁLIDA!");
         retornoInicio();
         break;
-    }if(abreConta == 1){
-        
+    }if (abreConta == 1) {
         inicio();
         
+    } else if(abreConta == 2){
+        console.log("OPERAÇÃO CANCELADA!");
     }
+    
         
 }
 // função: Criar senha
@@ -123,7 +125,7 @@ switch (abreConta){
         break;
 
     case 2:
-        console.log("OOPERAÇÃO CANCELADA!");
+        console.log("OPERAÇÃO CANCELADA!");
         
         break;
 
