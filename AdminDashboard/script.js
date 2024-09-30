@@ -68,12 +68,23 @@ if(window.innerWidth < 768) {
 
 /* DROPDOWN END */
 
-/* ativa/desativa dark mode*/
-const iconButtonDark = document.querySelector('.drop .btt-darkmode img');
-document.querySelector('.btt-darkmode').addEventListener('click', function() {  
-    
+// FUNCTION NIGHT MODE 
+const body = document.body;  
+const iconButtonDark = document.querySelector('.btt-darkmode img');  
+const darkModeImg = "https://cdn3.iconfinder.com/data/icons/user-interface-black-edition/128/dark_mode-256.png";  
+const lightModeImg = "https://cdn1.iconfinder.com/data/icons/simple-and-color-24px/24/Moon-Dark_mode-256.png";  
 
-    iconButtonDark.style = 'float: right';
+document.querySelector('.btt-darkmode').addEventListener('click', function() {  
+    // Alternar classes de modo  
+    body.classList.toggle('dark-mode');  
+    body.classList.toggle('light-mode');  
+
+    // Trocar a imagem do botão  
+    if (body.classList.contains('dark-mode')) {  
+        iconButtonDark.src = darkModeImg;  // Altere para imagem do modo escuro  
+    } else {  
+        iconButtonDark.src = lightModeImg;  // Altere para imagem do modo claro  
+    }  
 });
 
 /* SearchButton e SearchForm */
@@ -105,4 +116,3 @@ window.addEventListener('resize', function(){
 })
 /* SearchButton e SearchForm END */
 
-// FUNCTION NIGHT MODE 

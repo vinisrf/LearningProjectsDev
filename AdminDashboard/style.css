@@ -34,38 +34,142 @@ li{
 html{
     overflow: hidden;
 }
+/* Modo claro */  
+body.light-mode main .left h1,  
+body.light-mode main ul li a,  
+body.light-mode main p,  
+body.light-mode main h3,  
+body.light-mode main i,  
+body.light-mode main table tr,  
+body.light-mode main table td {  
+    color: var(--dark);  
+}
 
-/*modo dark*/ /*
-
-
-
-/* light mode */
-
-#sidebar ul li a{
+body.light-mode #sidebar a{
     background: var(--light)
 }
-#sidebar ul li a span{
-    color: black;
+body.light-mode #sidebar .brand{
+    background: var(--light);
+
 }
-#sidebar div.drop .menu-settings{
+body.light-mode #sidebar ul li.active{
+    background: var(--grey);
+
+}
+body.light-mode #sidebar ul li a span{
+    color: var(--dark);
+}
+body.light-mode #sidebar div.drop .menu-settings{
     background-color: var(--light);
 }
-#content nav i.bx.bx-list-ul{
-    color: black;
+body.light-mode .drop .btt-darkmode img{
+    float: left;
+    transition: 5s;
 }
-#content nav .notification{
-    color: black;
+body.light-mode #content .top-menu::before{
+    background: var();
 }
-#content main{
+body.light-mode #content nav::before{
+    color: var(--light);
+
+}
+body.light-mode #content nav{
+    background: var(--light);
+}
+body.light-mode main{
+    background: var(--dark-grey);
+}
+body.light-mode #content main .head-title .left .breadcrumb li{
+    color: var(--dark)
+}
+body.light-mode #content nav::before{
+    background: var(--grey);
+
+}
+body.light-mode #content nav .notification{
+    color: var(--dark);
+}
+body.light-mode #content main{
     background: var(--grey);
 }
-#content main .table-data div{
+body.light-mode #content main .table-data div{
     background: var(--light);
 }
-#content main .box-info li{
+body.light-mode #content main .box-info li{
     background: var(--light);
 }
+body.light-mode #content main .table-data div ul.todo-list li{
+    background: var(--grey);
+    
+} 
 
+/* Modo escuro */  
+body.dark-mode main .left h1,  
+body.dark-mode main ul li a,  
+body.dark-mode main p,  
+body.dark-mode main h3,  
+body.dark-mode main i,  
+body.dark-mode main table tr,  
+body.dark-mode main table td {  
+    color: var(--light);  
+} 
+body.dark-mode #sidebar .brand {
+    background: var(--dark);
+}
+body.dark-mode #sidebar {
+    background: var(--dark);
+}
+body.dark-mode #sidebar ul li.active{
+    background: var(--dark-grey);
+
+}
+body.dark-mode #sidebar ul li a{
+    background: var(--dark)
+}
+body.dark-mode #sidebar ul li a span{
+    color: var(--light);
+}
+body.dark-mode #sidebar div.drop .menu-settings{
+    background-color: var(--dark);
+}
+body.dark-mode .drop .btt-darkmode img{
+    float: right;
+    transition: 5s;
+}
+body.dark-mode #content nav::before{
+    color: var(--dark);
+}
+body.dark-mode #content nav{
+    background: var(--dark);
+}
+body.dark-mode .top-menu nav{
+    color: var(--dark);
+}
+body.dark-mode #content nav i.bx.bx-list-ul{
+    color: var(--light);
+}
+body.dark-mode #content nav .notification{
+    color: var(--light);
+}
+body.dark-mode #content main{
+    background: var(--dark-grey);
+}
+body.dark-mode #content main .head-title .left .breadcrumb li{
+    background: var(--dark-grey);
+}
+body.dark-mode #content main .table-data div{
+    background: var(--dark);
+}
+body.dark-mode #content main .box-info li{
+    background: var(--dark);
+}
+body.dark-mode #content main div li{
+    background: var(--dark-grey);
+}
+body.dark-mode #content main .table-data div ul.todo-list li{
+    background: var(--dark);
+    
+}
 
 /*SIDEBAR*/
 #sidebar{
@@ -74,7 +178,6 @@ html{
     left: 0;
     width: 280px;
     height: 100%;
-    background-color: var(--light);
     z-index: 2000; /*??*/
     font-family: var(--lato);   
     transition: .3s ease;
@@ -94,7 +197,6 @@ html{
     position: sticky;
     top: 0;
     left: 0;
-    background: var(--light);
     z-index: 1;
     padding-bottom: 20px;
     box-sizing: content-box;
@@ -128,7 +230,6 @@ ul a{
     padding: 4px;
 }
 #sidebar ul li.active{
-    background: var(--grey);
     position: relative;
 }
 #sidebar ul li .active::before{
@@ -226,7 +327,7 @@ ul a{
     display: flex;
     flex-wrap: wrap;
     position: absolute;
-    left: 280px;
+    left: 17.5rem;
     background-color: var(--grey);
     min-width: 200px;
     height: 650px;
@@ -299,7 +400,6 @@ ul a{
     overflow: hidden;
 }
 .drop .btt-darkmode img{
-    float: left;
     border-radius: 100%;
     width: 20px;
     height: 20px;
@@ -324,14 +424,10 @@ ul a{
     width: calc(100% - 60px);
     left: 60px;
 }
-/* NAV*/
 
-/*#night-mode.active::after #content nav{
-    background-color: var(--dark);
-}*/
+/* NAV*/
 #content nav{
     height: 56px;
-    background: var(--light);
     padding: 0 24px;
     display: flex;
     align-items: center;
@@ -351,8 +447,10 @@ ul a{
     left: 0;
     border-radius: 50%;
     box-shadow: -20px -20px 0;
-    color: var(--light);
 
+}
+#content nav i.bx.bx-list-ul{
+    color: var(--blue);
 }
 #content nav i.bx.bx-list-ul{
     cursor: pointer;
@@ -458,23 +556,22 @@ ul a{
     font-size: 36px;
     font-weight: 600;
     margin-bottom: 10px;
-    color: var(--dark)
+    
 }
 #content main .head-title .left .breadcrumb{
     display: flex;
     align-items: center;
     grid-gap: 16px
 }
-#content main .head-title .left .breadcrumb li{
-    color: var(--dark)
-}
 #content main .head-title .left .breadcrumb li a{
-    color: var(--dark-grey);
     pointer-events: none;
 }
 #content main .head-title .left .breadcrumb li a.active{
     color: var(--blue);
     pointer-events: unset;
+}
+#content main .head-title i{
+    color: white;
 }
 #content main div a.btn-download{
     height: 36px;
@@ -616,7 +713,7 @@ ul a{
 #content main .table-data div ul.todo-list li{
     width: 100%;
     margin-bottom: 16px;
-    background: var(--grey);
+    
     border-radius: 10px;
     padding: 14px 20px;
     display: flex;
